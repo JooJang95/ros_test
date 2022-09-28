@@ -15,7 +15,8 @@ my_first_ros_study
 -실행
 
 
-## ROS 명령어
-- roscore *마스터 실행 명령어*
+### ROS 명령어
+```- roscore *마스터 실행 명령어*
 - rosrun <패키지이름> <실행파일이름> *노드 실행 명령어*
 - rqt_graph  *노드들의 정보를 그림으로 볼수있는 명령어*
+```
