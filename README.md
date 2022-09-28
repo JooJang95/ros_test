@@ -9,11 +9,13 @@ my_first_ros_study
 -실행
 
 ### 22년 9월 28일 (수요일) 
-- py_publisher.py, py_subscriber.py
-노드 생성
--빌드
--실행
+- py_publisher.py, py_subscriber.py 노드 생성
+- topic_second 패키지 생성
+- second_pub, second_sub, py_second_pub.py, py_second_sub.py 노드 생성
+- 빌드
+- 실행
 
+- 과제 1번
 
 ### ROS 명령어
 ```- roscore *마스터 실행 명령어*
