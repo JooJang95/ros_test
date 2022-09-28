@@ -20,3 +20,15 @@ my_first_ros_study
 - rosrun <패키지이름> <실행파일이름> *노드 실행 명령어*
 - rqt_graph  *노드들의 정보를 그림으로 볼수있는 명령어*
 ```
+
+### catkin_create_pkg
+- 현재 위치한 작업 공간에 패키지를 생성한다.
+- catkin_create_pkg <패키지 이름> <의존성>
+``` bash
+        catkin_create_pkg <패키지이름> <의존성 1> <의존성 2>.... 띄어쓰기로 구분
+```
+``` bash
+        catkin_create_pkg
+        예시 :
+        패키지이름 : topic_tutorial
+        의존성 : roscpp rospy std_msgs
