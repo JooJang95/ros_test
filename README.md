@@ -29,6 +29,14 @@ my_first_ros_study
    - 빌드
    - 생성
 
+- service_tutorial
+   - service_tutorial 패키지 생성
+   - srv 디렉토리에 AddTwoInts.srv 생성
+   - my_client.cpp,my_server.cpp,
+     py_client.py,py_server.py 노드 생성
+   - 빌드
+   - 실행
+
 ### ROS 명령어
 ```- roscore 마스터 실행 명령어
 - rosrun <패키지이름> <실행파일이름> 노드 실행 명령어
