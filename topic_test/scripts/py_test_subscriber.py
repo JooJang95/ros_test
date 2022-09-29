@@ -9,7 +9,7 @@ def test_Callback(msg):
     
 
 def test_listener():
-    rospy.init_node("my_test_subscriber")
+    rospy.init_node("py_test_subscriber")
     rospy.Subscriber("topic_test",Int64,test_Callback,queue_size=100)
 
     rospy.spin()

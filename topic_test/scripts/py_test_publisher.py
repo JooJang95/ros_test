@@ -5,7 +5,7 @@ import rospy
 from std_msgs.msg import Int64
 
 def test_count():
-    rospy.init_node("my_test_publisher")
+    rospy.init_node("py_test_publisher")
     pub = rospy.Publisher("topic_test",Int64,queue_size=100)
     
     loop_rate = rospy.Rate(4)

@@ -3,17 +3,17 @@
 
 int main(int argc,char** argv){
 
-    ros::init("__test_publisher");
+    ros::init(argc,argv,"my_test_publisher");
     ros::NodeHandle nh;
 
-    ros.Publisherpub = nh.advertise<std_msgs::Int64>("my_test_count",100);
+    ros::Publisher pub = nh.advertise<std_msgs::Int64>("my_test_count",100);
     ros::Rate loop_rate(4);
 
     std_msgs::Int64 msg;
     msg.data = 0;
     
     while(ros::ok()){
-        ROS_INFO(msg);
+        pub.publish(msg);
         loop_rate.sleep();
         msg.data++;
         if (msg.data > 100){
