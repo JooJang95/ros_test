@@ -21,7 +21,7 @@ int main(int argc,char** argv){
 
     // 서비스 클라이언트 (my_client)를 선언한다.
     // 서비스 이름은 (add_two_ints)이고 패키지 (service_tutorial)의 (AddTwoInts) 서비스 파일을 사용한다.
-    ros::ServiceClient my_client = nh.seresultrviceClient<service_tutorial::AddTwoInts>("add_two_ints");
+    ros::ServiceClient my_client = nh.serviceClient<service_tutorial::AddTwoInts>("add_two_ints");
 
     service_tutorial::AddTwoInts srv;
 
