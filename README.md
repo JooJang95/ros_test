@@ -37,6 +37,22 @@ my_first_ros_study
    - 빌드
    - 실행
 
+### 22년 9월 30일 (금요일)
+
+- [과제2yh_star] (./yh_star)
+  - yh_star 패키지 생성
+  - yh_star_pub, yh_star_sub,
+  yh_star_pub.py, yh_star_sub.py 노드생성
+  - 빌드
+  - 실행
+
+- [과제3yh_service] (./yh_service)
+  - yh_service 패키지 생성
+  - yh_server, yh_client,
+  yh_server.py, yh_client.py 노드생성
+  - 빌드
+  - 실행
+
 ### ROS 명령어
 ```- roscore 마스터 실행 명령어
 - rosrun <패키지이름> <실행파일이름> 노드 실행 명령어
