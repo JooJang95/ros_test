@@ -1,21 +1,27 @@
-#! /usr/bin/python3
-#-*- coding: utf-8 -*-
+#! /usr/bin/python
+#-*- coding: utf-8 -*- 
 
 import rospy
-from yh_check.msg import YhCheck
+from yh_check.msg import YhCheck 
 
-def camera():
-    rospy.init_node("yh_check_camera")
-    my_pub_camera = rospy.Publisher("check_distance",YhCheck)
-    
-    loop_rate = rospy.Rate(2.5)
+msg_camera = YhCheck() 
 
+def yh_check_camera():
+    rospy.init_node("yh_check_camera")    
+
+    pub = rospy.Publisher("check_camera",YhCheck,queue_size= 100) 
+
+    loop_rate = rospy.Rate(2.5)    
     msg = YhCheck()
     
-    while not rospy.is_shutdown():
+    msg.data = True # bool 자료형 변수 초기화
+
+    while not rospy.is_shutdown():        
         msg.stamp = rospy.Time.now()
-        my_pub_camera.publish(msg)
+        if (msg.data == True): msg.data = False
+        else : msg.data = True
+        pub.publish(msg)
         loop_rate.sleep()
 
 if __name__ == "__main__":
-    camera()
+        yh_check_camera()   

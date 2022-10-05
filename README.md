@@ -60,13 +60,33 @@ my_first_ros_study
   calculate_server.py ,calculate_client.py 노드 생성
   -빌드 
   -실행 
-  - [파라미터 서버 활용] (#parameter-server)
+  - [파라미터 서버 활용] (parameter-server)
+
 
 ## [과제4](./yh_dual/)
 
 ## [과제5](./yh_difference/)
 
+### 22년 10월 5일 (화요일)
+
 ## [과제6](./yh_check/)
+  - yh_check 패키지 생성
+  - yh_check_distance, yh_check_camera, yh_check_sub 
+    yh_check_distance.py, yh_check_camera.py,
+    yh_check_sub.py  노드생성
+  - 빌드
+  - 실행
+  - python class로 작성
+
+## [과제7](./yh_connect/)
+  - yh_check 패키지 생성
+  - yh_connect_pub, yh_connect_sub_pub, yh_connect_sub
+    yh_connect_pub.py, yh_connect_sub_pub.py, 
+    yh_connect_sub.py  노드생성
+  - 빌드
+  - 실행
+  - python class로 작성
+
 
 ### ROS 명령어
 ```- roscore 마스터 실행 명령어

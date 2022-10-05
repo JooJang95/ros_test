@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(yh_check)
+project(yh_connect)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -48,22 +48,8 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-add_message_files(
-  FILES
-  YhCheck.msg  
-)
-
-## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
-
-## Generate actions in the 'action' folder
-# add_action_files(
-#   FILES
-#   Action1.action
+# add_message_files(
+#   FILESmsgCallbackion
 #   Action2.action
 # )
 
@@ -104,7 +90,7 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES yh_check
+ LIBRARIES yh_connect
 #  CATKIN_DEPENDS message_generation roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
@@ -122,7 +108,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/yh_check.cpp
+#   src/${PROJECT_NAME}/yh_connect.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -133,7 +119,9 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/yh_check_node.cpp)
+add_executable(yh_connect_sub src/yh_connect_sub.cpp)
+add_executable(yh_connect_sub_pub src/yh_connect_sub_pub.cpp)
+add_executable(yh_connect_pub src/yh_connect_pub.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -143,13 +131,20 @@ include_directories(
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(yh_connect_sub ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(yh_connect_sub_pub ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(yh_connect_pub ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(${PROJECT_NAME}_node
-#   ${catkin_LIBRARIES}
-# )
-
+target_link_libraries(yh_connect_sub
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(yh_connect_sub_pub
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(yh_connect_pub
+  ${catkin_LIBRARIES}
+)
 #############
 ## Install ##
 #############
@@ -160,7 +155,7 @@ include_directories(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
-  scripts/yh_check_camera.py scripts/yh_check_distance.py scripts/yh_check_sub.py scripts/py_check_sub.py
+  scripts/yh_connect_pub.py scripts/yh_connect_sub_pub.py scripts/yh_connect_sub.py scripts/py_connect_pub.py scripts/py_connect_sub_pub.py scripts/py_connect_sub.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
@@ -197,7 +192,7 @@ catkin_install_python(PROGRAMS
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_yh_check.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_yh_connect.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

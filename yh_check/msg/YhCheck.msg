@@ -1,2 +1,2 @@
-bool true
+bool data
 time stamp
