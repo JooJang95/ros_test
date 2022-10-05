@@ -71,7 +71,7 @@ my_first_ros_study
 
 ## [과제6](./yh_check/)
   - yh_check 패키지 생성
-  - yh_check_distance, yh_check_camera, yh_check_sub 
+  - yh_check_distance, yh_check_camera, yh_check_sub,
     yh_check_distance.py, yh_check_camera.py,
     yh_check_sub.py  노드생성
   - 빌드
@@ -80,7 +80,7 @@ my_first_ros_study
 
 ## [과제7](./yh_connect/)
   - yh_check 패키지 생성
-  - yh_connect_pub, yh_connect_sub_pub, yh_connect_sub
+  - yh_connect_pub, yh_connect_sub_pub, yh_connect_sub,
     yh_connect_pub.py, yh_connect_sub_pub.py, 
     yh_connect_sub.py  노드생성
   - 빌드
