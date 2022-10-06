@@ -67,7 +67,7 @@ my_first_ros_study
 
 ## [과제5](./yh_difference/)
 
-### 22년 10월 5일 (화요일)
+### 22년 10월 5일 (수요일)
 
 ## [과제6](./yh_check/)
   - yh_check 패키지 생성
@@ -86,6 +86,42 @@ my_first_ros_study
   - 빌드
   - 실행
   - python class로 작성
+
+### 22년 10월 6일 (목요일)
+## [yh_turtle](./yh_turtle/)
+ - yh_turtle 패키지 생성
+ - turtle_clear, turtle_keyboard_clear, turtle_keyboard, turtle_patrol
+   turtle_clear.py, turtle_keyboard_clear.py, turtle_keyboard.py, turtle_patrol.py
+ - 빌드
+ - 실행
+ - python class로 작성
+
+### [roslaunch](./yh_turtle/launch/)
+  - roscore와 launch 파일에 있는 노드들을 실행시키는 명령
+  - launch 파일은 '패키지 디렉토리/launch'에 만든다.
+  - roslaunch 실행
+  
+  '''bash
+  $ roslaunch <패키지이름> <런치파일이름>
+
+  '''
+
+  - launch 파일은 <launch></launch>태그 사이에 내용을 입력한다.
+  - node 태그는 패키지 이름, 노드 타입 ,노드 이름을 입력한다.
+  - param 태그는 파라미터 이름, 값, 타입을 입력한다.
+
+
+
+
+
+
+
+### teleop_twist_keyboard
+ - 키보드 입력을 받아 /cmd_vel 토픽의 geometry_msgs/Twist
+ 메시지로 publish하는 노드
+ - 설치
+ '''bash
+ $ sudo apt install ros-melodic
 
 
 ### ROS 명령어
