@@ -96,6 +96,12 @@ my_first_ros_study
  - 실행
  - python class로 작성
 
+ ### 22년 10월 7일 (금요일)
+ - turtle_circle.py turtle_triangle.py turtle_goal.py 노드생성
+ - turtle_goal에서 인공지능 구현
+ - 빌드
+ - 실행
+
 ### [roslaunch](./yh_turtle/launch/)
   - roscore와 launch 파일에 있는 노드들을 실행시키는 명령
   - launch 파일은 '패키지 디렉토리/launch'에 만든다.
@@ -110,7 +116,11 @@ my_first_ros_study
   - node 태그는 패키지 이름, 노드 타입 ,노드 이름을 입력한다.
   - param 태그는 파라미터 이름, 값, 타입을 입력한다.
 
+### 22년 10월 7일 (금요일)
+ - turtle_circle.py turtle_triangle.py turtle_goal.py 노드생성
+ - turtle_goal
 
+ 
 
 
 
